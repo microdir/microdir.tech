@@ -8,7 +8,7 @@
 
 ## Metodologia 
 
-* Explicar o modelo de _machine learning_ (ML) que você está trabalhando. 
+O modelo de  _machine learning_ utilizado foi o MultLayer Perceptron (MLP), que é o método de criar uma rede neural artificial no qual utiliza-se de um estímulo que farão a atualização de parãmetros até atingir o critério de parada para, de fato, aprender com os modelos escolhidos para teste, já que cada atualização passa pela regra de correção de erros. Sendo assim, cada atualização do parâmetro procura diminuir o erro anterior. 
 * Explicar as etapas do treinamento e teste. 
 * Caso tenha selecionado atributos, explicar a motivação para a seleção de tais atributos. 
 
