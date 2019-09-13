@@ -13,8 +13,8 @@
   Os atributos foram selecionados com o palpite de que a aprovação do aluno na disciplina depende do seu aprendizado e seu aprendizado depende da sua prática, já que se trata de uma disciplina onde a prática é o que leva ao sucesso. Considerando a quantidade de exercícios propostos, a primeira unidade possui informações suficientes para uma análise de risco.
 
 ## Códigos 
-
-### CONFIGURANDO A CAMADA DE ENTRADA COM TRÊS NEURÔNIOS, MAIS TRÊS NA CAMADA ESCONDIDA
+```py
+# CONFIGURANDO A CAMADA DE ENTRADA COM TRÊS NEURÔNIOS, MAIS TRÊS NA CAMADA ESCONDIDA
 classifier.add(Dense( activation = 'relu', input_dim = 3, units = 3, kernel_initializer = 'uniform'))
 
 
@@ -27,17 +27,18 @@ classifier.add(Dense( activation = 'sigmoid', units = 1, kernel_initializer = 'u
 
 ### Ajuste do RNA ao conjunto de treinamento
 classifier.fit(X_train, y_train, batch_size = 5, epochs = 40)
-
+```
 ## Experimentos 
 
   Os parâmetros avaliados foram as notas da primeira prova, a quantidade de submissões de questões da lista até a primeira prova e a quantidade de submissões até a primeira prova as quais o aluno acertou 100%.
-
-### Parâmetros de entrada e saída
+```py
+# Parâmetros de entrada e saída
 X = dataset.iloc[:,[2,17,20]].values
 y = dataset.iloc[:, 11].values
 
 ### Saída
 Taxa de acerto:
 0.8333333333333334
-
-  De acordo com a saída apresentada, o modelo tem 83% de chance de prever a aprovação de um aluno na disciplina de LOP.
+```
+## Conclusão
+  De acordo com a saída apresentada, o modelo de machine learning utilizado tem 83% de chance de prever a aprovação de um aluno na disciplina de LOP avaliando seu desempenho na primeira unidade (parâmetros).
